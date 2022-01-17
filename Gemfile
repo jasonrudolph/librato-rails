@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 gemspec
 
-rails_version = ENV["RAILS_VERSION"] || '4.2'
+rails_version = ENV["RAILS_VERSION"] || '7.0'
 if rails_version == "master"
   rails = {github: "rails/rails"}
 else
@@ -20,10 +20,6 @@ gem 'mocha', require: false
 
 # benchmarking
 gem 'benchmark_suite'
-
-platforms :ruby_19 do
-  gem 'nokogiri', '~> 1.6.0' # 1.7+ requires ruby 2.1
-end
 
 # platforms :rbx do
 #   gem 'rubysl', '~> 2.0'
